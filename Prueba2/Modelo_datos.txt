@@ -1,0 +1,43 @@
+create table tarjetas_banco (
+id serial primary key,
+productID  varchar (6) not null,
+cardId varchar (100) not null,
+cardNumber int unique not null,
+holderName varchar (100) not null,
+issuedAt date,
+expiresAt date, 
+status varchar (50) not null,
+blockedAt date,
+blockedReason varchar (200) not null,
+balance decimal (50) not null,
+currency varchar (20) not null
+);
+
+insert into table tarjetas_banco (
+productID,
+cardId,
+cardNumber,
+holderName,
+issuedAt,
+expiresAt,
+status,
+blockedAt,
+blockedReason,
+balance,
+currency
+
+) 
+
+values (
+'222336', 
+'01' , 
+null , 
+'0000-2222-2222-333',
+'portafolio' , 
+current_date , 
+current_date , 
+'(ISSUED)',
+current_date,
+'vencimiento', 
+10.5,
+'USD')
